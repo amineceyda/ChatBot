@@ -1,0 +1,368 @@
+{
+  "intents": [
+    {
+      "tag": "greeting",
+      "patterns": [
+        "Merhaba",
+        "Selam",
+        "Nasılsın",
+        "Nasılsınız?",
+        "Orada kimse var mı?",
+        "Merhabalar",
+        "Günaydın"
+      ],
+      "responses": [
+        "Merhaba",
+        "Merhaba, ziyaretiniz için teşekkür ederim",
+        "Merhaba, size nasıl yardımcı olabilirim?",
+        "Selam, eğer Ödeal kampanyaları hakkında bilgi almak isterseniz 'Kampanyaları göster' diyebilirsiniz."
+      ]
+    },
+    {
+      "tag": "goodbye",
+      "patterns": ["Hoşçakal","Hoşça kal", "Görüşmek üzere", "Elveda", "Bay Bay", "baybay"],
+      "responses": [
+        "Görüşmek üzere, ziyaretiniz için teşekkür ederim",
+        "Görüşmek üzere, iyi günler!",
+        "İyi günler",
+        "Hoşça kal! Yakında tekrar gelin."
+      ]
+    },
+    {
+      "tag": "thanks",
+      "patterns": [
+        "Teşekkürler",
+        "Teşekkür ederim",
+        "Bu yardımcı oldu",
+        "Çok teşekkür ederim!",
+        "sağol","sağ ol"
+      ],
+      "responses": [
+        "Rica ederim, her zaman yardımcı olurum.",
+        "Yardımcı olmaktan mutluluk duyarım!",
+        "Her zaman!",
+        "Benim için bir zevkti"
+      ]
+    },
+    {
+      "tag": "campaign_1",
+      "patterns": [
+        "Ödeal Restoran Kampanyası",
+        "Restoranlardaki Fırsatlar",
+        "Restoran İndirimleri",
+        "Restoran"
+      ],
+      "responses": [
+        "Ödeal YemekZevk10 koduyla restoranlarda %10 indirim fırsatı sunuyor.",
+        "Ödeal kullanıcılarına her Çarşamba restoranlarda ücretsiz tatlı ikramı yapılıyor."
+      ]
+    },
+    {
+      "tag": "campaign_2",
+      "patterns": [
+        "Ödeal Kafe Kampanyası",
+        "Kafe İndirimleri",
+        "Kahve Fırsatları"
+      ],
+      "responses": [
+        "Ödeal KahveKeyfi ile kafe ziyaretlerinizde her 5 kahve alımında 1 bedava.",
+        "Ödeal kullanıcılarına özel olarak çocuklar için kafelerde ücretsiz sıcak çikolata sunumu yapılıyor."
+      ]
+    },
+    {
+      "tag": "campaign_3",
+      "patterns": [
+        "Ödeal Eğlence Yerleri Kampanyası",
+        "Sinema İndirimleri",
+        "Eğlence Fırsatları"
+      ],
+      "responses": [
+        "Ödeal SinemaGecesi ile sinema biletlerinde 2 alana 1 bilet hediyesi veriliyor.",
+        "Ödeal kullanıcılarına her Pazar eğlence mekanlarında canlı müzik gösterileri sunuluyor."
+      ]
+    },
+    {
+      "tag": "campaign_4",
+      "patterns": [
+        "Ödeal Spor Salonu Kampanyası",
+        "Egzersiz Fırsatları",
+        "Fitness İndirimleri"
+      ],
+      "responses": [
+        "Ödeal AktifYaşam ile 3 aylık spor salonu üyeliği alana 1 ay ücretsiz veriliyor.",
+        "Ödeal kullanıcılarına özel olarak hafta sonları spor salonlarında grup antrenmanları ücretsiz sunuluyor."
+      ]
+    },
+    {
+      "tag": "campaign_5",
+      "patterns": [
+        "Ödeal Kozmetik Ürünleri Kampanyası",
+        "Güzellik Ürünleri İndirimleri",
+        "Cilt Bakımı Fırsatları"
+      ],
+      "responses": [
+        "Ödeal GüzellikSırları ile 50 TL ve üzeri kozmetik alışverişlerinde %20 indirim sağlanıyor.",
+        "Ödeal kullanıcılarına her Perşembe kozmetik mağazalarında ücretsiz makyaj dersleri sunuluyor."
+      ]
+    },
+    {
+      "tag": "campaign_6",
+      "patterns": [
+        "Ödeal Elektronik Mağazası Kampanyası",
+        "Teknoloji İndirimleri",
+        "Bilgisayar Fırsatları"
+      ],
+      "responses": [
+        "Ödeal TeknoFırsat ile seçili dizüstü bilgisayarlar için 1000 TL indirim sunuluyor.",
+        "Ödeal kullanıcılarına her Cuma elektronik mağazalarında akıllı telefonlar için sürpriz hediyeler veriliyor."
+      ]
+    },
+    {
+      "tag": "campaign_7",
+      "patterns": [
+        "Taksitli ödeme kampanyaları",
+        "Kredi kartı fırsatları",
+        "Taksit imkanları"
+      ],
+      "responses": [
+        "Taksitli ödeme kampanyalarımızı kaçırmayın! 1. Anlaşmalı bankalarla 12 aya varan taksit fırsatı. 2. Her ayın sonunda yapacağınız ilk taksit işlemine %5 indirim."
+      ]
+    },
+    {
+      "tag": "campaign_8",
+      "patterns": [
+        "Sabit komisyon oranları",
+        "Ödeme komisyonları",
+        "Ödeal fiyatlandırması"
+      ],
+      "responses": [
+        "Ödeal ile sabit komisyon oranları! 1. Tek çekim işlemler için %4,49 komisyon. 2. Taksitli işlemler için avantajlı komisyon oranları."
+      ]
+    },
+    {
+      "tag": "campaign_9",
+      "patterns": [
+        "Mobil POS kullanımı",
+        "Akıllı telefon POS",
+        "Mobil ödeme fırsatları"
+      ],
+      "responses": [
+        "Ödeal ile mobil POS kullanımı! 1. Her yerde kolayca ödeme alın. 2. İşyerinizdeki çalışanları uygulamaya ekleyerek tahsilat yapın."
+      ]
+    },
+    {
+      "tag": "campaign_10",
+      "patterns": [
+        "Anlaşmalı bankalar",
+        "Banka kartları",
+        "Kredi kartı işlemleri"
+      ],
+      "responses": [
+        "Ödeal ile tüm bankalardan ödeme alın! 1. Her banka kartı için aynı POS cihazı. 2. İzinli sektörlerde 12 aya varan taksit imkanı."
+      ]
+    },
+    {
+      "tag": "campaign_11",
+      "patterns": [
+        "Kredi kartı taksit oranları",
+        "Taksit avantajları",
+        "Taksit seçenekleri"
+      ],
+      "responses": [
+        "Taksit oranlarımızı inceleyin! 1. İzinli sektörlerde 2, 3, 4, 6, 9 ve 12 taksit imkanı. 2. Komisyon oranları taksit sayısına göre değişiklik gösterir."
+      ]
+    },
+    {
+      "tag": "campaign_12",
+      "patterns": [
+        "Hızlı tahsilat",
+        "Mobil ödeme hızı",
+        "Ödemeleri hemen alın"
+      ],
+      "responses": [
+        "Ödeal ile hızlı tahsilat! 1. Anında ödeme alın. 2. Mobil ödeme hızıyla işlemleri kolayca takip edin."
+      ]
+    },
+    {
+      "tag": "campaign_13",
+      "patterns": [
+        "Ücretsiz uygulama kullanımı",
+        "Ödeal fiyatlandırması",
+        "Kullanım maliyeti"
+      ],
+      "responses": [
+        "Ödeal uygulaması ücretsiz! 1. Aidat, taahhüt veya ekstra ücret yok. 2. Yalnızca yapılan işlem başına komisyon ödersiniz."
+      ]
+    },
+    {
+      "tag": "campaign_14",
+      "patterns": [
+        "Taksitli işlemler",
+        "Kredi kartı taksitleri",
+        "Taksit avantajları"
+      ],
+      "responses": [
+        "Taksitli işlemlerde avantajlıyız! 1. İzinli sektörlerde 2, 3, 4, 6, 9 ve 12 taksit imkanı. 2. Komisyon oranları taksit sayısına göre değişir."
+      ]
+    },
+    {
+      "tag": "campaign_15",
+      "patterns": [
+        "Sadece POS çözümü",
+        "Yazar kasa entegrasyonu",
+        "Fiziki POS"
+      ],
+      "responses": [
+        "Ödeal ile sadece POS çözümü! 1. Tüm ödeme işlemlerini kolayca yapın. 2. Yazar kasa entegrasyonu ve fiziki POS ürünleri."
+      ]
+    },
+    {
+      "tag": "campaign_16",
+      "patterns": [
+        "Tek hesapla tahsilat",
+        "Birden fazla çalışan",
+        "Çalışan tahsilatı"
+      ],
+      "responses": [
+        "Tek hesapla birden fazla çalışan tahsilat yapın! 1. İş yerinizdeki çalışanları uygulamaya ekleyin. 2. Tahsilatı hızlandırın."
+      ]
+    },
+    {
+      "tag": "funny",
+      "patterns": [
+        "Bana bir şaka anlat!",
+        "Bana komik bir şey söyle!",
+        "Bir şaka biliyor musun?"
+      ],
+      "responses": [
+        "Neden kodlayıcılar her zaman soğuk içeceklere tercih eder ? Çünkü donmaya dayanıklıdırlar?",
+        "Bir kodlayıcı bir bara gider. Bardan çıkarken kapıyı iter, iteklemez, çeker, çekmez ve sonra bağlar: 'Açık kaynak kodlu değilmiş!'"
+      ]
+    },
+    {
+      "tag": "usage_guide",
+      "patterns": [
+        "Kampanyalara nasıl ulaşabilirim?",
+        "Kampanyaları görüntüleme",
+        "Nasıl kampanya fikirleri alabilirim?"
+      ],
+      "responses": [
+        "Kampanyalara erişmek için şunları yapabilirsiniz:\n1. 'Kampanyaları göster' yazabilirsiniz.\n2. 'Kampanya fikirleri' isteyebilirsiniz.\n3. Hangi tür kampanyaları aradığınızı söyleyebilirsiniz, örneğin 'Mobil ödeme fırsatları' veya 'Eğlence Fırsatları'",
+        "Kampanyalara erişmek için lütfen 'Kampanyaları göster' veya benzer bir ifade kullanın. Size uygun kampanya fikirlerini sunacağım.",
+        "Merak ettiğiniz kampanyaları sormak için 'Kampanyaları göster' veya benzeri ifadeleri kullanabilirsiniz. Size en iyi kampanyaları sunmak için buradayım."
+      ]
+    },
+    {
+      "tag": "support",
+      "patterns": [
+        "Yardım",
+        "Yardım lazım",
+        "Sorun yaşıyorum",
+        "Nasıl yardımcı olabilirsiniz?",
+        "Destek gerekiyor"
+      ],
+      "responses": [
+        "Ne hakkında yardımcı olabilirim?",
+        "Elbette, size nasıl yardımcı olabilirim?",
+        "Sorununuzu çözmek için buradayım, ne hakkında yardımcı olabilirim?",
+        "Sorununuzu anlamaya çalışacağım, lütfen detayları paylaşın.",
+        "Eğer bir kampanya fikri veya başka bir sorunuz varsa, sormaktan çekinmeyin. Size yardımcı olmaktan mutluluk duyarım."
+      ]
+    },
+    {
+      "tag": "AksarayDiscountCampaign",
+      "patterns": ["Aksaray"],
+      "responses": ["Aksaray'deki %10 indirim fırsatını kaçırmayın!"]
+    },
+    {
+      "tag": "AnkaraDiscountCampaign",
+      "patterns": ["Ankara"],
+      "responses": ["Ankara'deki %10 indirim fırsatını kaçırmayın!"]
+    },
+    {
+      "tag": "AntalyaDiscountCampaign",
+      "patterns": ["Antalya"],
+      "responses": ["Antalya'deki %10 indirim fırsatını kaçırmayın!"]
+    },
+    {
+      "tag": "BursaDiscountCampaign",
+      "patterns": ["Bursa"],
+      "responses": ["Bursa'deki %10 indirim fırsatını kaçırmayın!"]
+    },
+    {
+      "tag": "EskişehirDiscountCampaign",
+      "patterns": ["Eskişehir"],
+      "responses": ["Eskişehir'deki %10 indirim fırsatını kaçırmayın!"]
+    },
+    {
+      "tag": "GaziantepDiscountCampaign",
+      "patterns": ["Gaziantep"],
+      "responses": ["Gaziantep'deki %10 indirim fırsatını kaçırmayın!"]
+    },
+    {
+      "tag": "GiresunDiscountCampaign",
+      "patterns": ["Giresun"],
+      "responses": ["Giresun'deki %10 indirim fırsatını kaçırmayın!"]
+    },
+    {
+      "tag": "KocaeliDiscountCampaign",
+      "patterns": ["Kocaeli"],
+      "responses": ["Kocaeli'deki %10 indirim fırsatını kaçırmayın!"]
+    },
+    {
+      "tag": "ManisaDiscountCampaign",
+      "patterns": ["Manisa"],
+      "responses": ["Manisa'deki %10 indirim fırsatını kaçırmayın!"]
+    },
+    {
+      "tag": "SamsunDiscountCampaign",
+      "patterns": ["Samsun"],
+      "responses": ["Samsun'deki %10 indirim fırsatını kaçırmayın!"]
+    },
+    {
+      "tag": "İstanbulDiscountCampaign",
+      "patterns": ["İstanbul"],
+      "responses": ["İstanbul'deki %10 indirim fırsatını kaçırmayın!"]
+    },
+    {
+      "tag": "İzmirDiscountCampaign",
+      "patterns": ["İzmir"],
+      "responses": ["İzmir'deki %10 indirim fırsatını kaçırmayın!"]
+    },
+    {
+      "tag": "BireyselCampaign",
+      "patterns": ["Bireysel için özel kampanyalar"],
+      "responses": [
+        "Bireysel işletmelerindeki %20 indirim fırsatını kaçırmayın!"
+      ]
+    },
+    {
+      "tag": "Tüzel ŞirketCampaign",
+      "patterns": ["Tüzel Şirket için özel kampanyalar"],
+      "responses": [
+        "Tüzel Şirket işletmelerindeki %20 indirim fırsatını kaçırmayın!"
+      ]
+    },
+    {
+      "tag": "Şahıs ŞirketiCampaign",
+      "patterns": ["Şahıs Şirketi için özel kampanyalar"],
+      "responses": [
+        "Şahıs Şirketi işletmelerindeki %20 indirim fırsatını kaçırmayın!"
+      ]
+    },
+    {
+      "tag": "AktifCampaign",
+      "patterns": ["Aktif kullanıcılara kampanya"],
+      "responses": [
+        "Aktif üyeleri için sürpriz kampanyayı kaçırmayın! İkinci ürün %50 indirimli"
+      ]
+    },
+    {
+      "tag": "PasifCampaign",
+      "patterns": ["Pasif kullanıcılara kampanya"],
+      "responses": [
+        "Pasif üyeleri için sürpriz kampanyayı kaçırmayın! İkinci ürün %50 indirimli"
+      ]
+    }
+  ]
+}
