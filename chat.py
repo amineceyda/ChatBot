@@ -3,6 +3,7 @@ import json
 import torch
 from model import NeuralNet
 from nltk_utils import bag_of_words, tokenize
+import streamlit as st
 
 device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
 
@@ -23,16 +24,14 @@ model = NeuralNet(input_size, hidden_size, output_size).to(device)
 model.load_state_dict(model_state)
 model.eval()
 
-#chat 
 bot_name = "VT"
-print("Kampanyalar hakkında konuşmak ister misiniz? Çıkmak isterseniz sadece 'bitir' yazın")
+st.title("Kampanya Botu")
 
-while True:
-    sentence = input("Sen: ")
-    if sentence == "bitir":
-        break
+# Kullanıcıdan metin girişi al
+user_input = st.text_input("Sen:", "")
 
-    sentence = tokenize(sentence)
+if user_input:
+    sentence = tokenize(user_input)
     X = bag_of_words(sentence, all_words)
     X = X.reshape(1, X.shape[0])
     X = torch.from_numpy(X).to(device)
@@ -44,9 +43,26 @@ while True:
     probs = torch.softmax(output, dim=1)
     prob = probs[0][predicted.item()]
 
+    response = ""
     if prob.item() > 0.75:
         for intent in intents['intents']:
             if tag == intent["tag"]:
-                print(f"{bot_name}: {random.choice(intent['responses'])}")
+                response = random.choice(intent['responses'])
+                break
     else:
-        print(f"{bot_name}: Üzgünüm sizi anlayamadım? Daha farklı açıklar mısınız?")
+        response = "Üzgünüm, sizi anlayamadım. Daha farklı açıklar mısınız?"
+
+    st.text(f"Bot: {response}")
+
+
+# "Öneriler" başlığı altında kampanya başlıklarını göster
+
+st.header("Öneriler")
+for intent in intents['intents']:
+    if intent["tag"].startswith("campaign_"):
+        campaign_title = intent["patterns"][0]  # Kampanya başlığını ilk pattern olarak alabilirsiniz
+        if st.button(campaign_title):
+            # Kullanıcı kampanyaya tıkladığında kampanya detaylarını göster
+            st.subheader(campaign_title)
+            response = random.choice(intent['responses'])
+            st.write(response)
